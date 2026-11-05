@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="sl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Poslovalnice | Novomat Avto steklo center</title>
+<meta name="description" content="Poslovalnice Novomat v Ljubljani, Mariboru, Celju, Kopru in Murski Soboti.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo/novomat-mark.png">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body data-page="poslovalnice">
+<main>
+  <section class="ph">
+    <h1 class="d1">Pet poslovalnic, ena ekipa.</h1>
+    <div class="ph__row">
+      <p class="lead">Od ponedeljka do petka 8.00–16.00. Ljubljana in Maribor tudi v soboto 8.00–12.00, Celje, Koper in Murska Sobota ob sobotah po dogovoru.</p>
+    </div>
+  </section>
+
+  <section class="wrap" style="padding-bottom:clamp(80px,9vw,180px)">
+    <div class="cards5" id="peCards"></div>
+  </section>
+
+  <section class="sec sec--mist wrap" id="podjetje">
+    <div class="sec__head">
+      <h2 class="d2">Vizitka podjetja</h2>
+      <p class="lead">Slovensko podjetje, ki se s popravili in menjavo avtomobilskih stekel ukvarja že od leta 1992.</p>
+    </div>
+    <dl class="vz">
+      <div><dt>Polno ime</dt><dd>NOVOMAT proizvodnja, storitve in trgovina d.o.o.</dd></div>
+      <div><dt>Kratko ime</dt><dd>NOVOMAT d.o.o.</dd></div>
+      <div><dt>Sedež</dt><dd>Valvasorjeva ulica 85, 2000 Maribor</dd></div>
+      <div><dt>Davčna številka</dt><dd>SI 18938337</dd></div>
+      <div><dt>Matična številka</dt><dd>5658373000</dd></div>
+      <div><dt>Vpis v sodni register</dt><dd>03.05.1992</dd></div>
+      <div><dt>Oblika</dt><dd>Družba z omejeno odgovornostjo</dd></div>
+      <div><dt>Osnovni kapital</dt><dd>41.729,01 EUR</dd></div>
+      <div><dt>TRR</dt><dd>SI56 0451 5000 0552 535 (Nova KBM)<br>SI56 0510 0801 1781 903 (Abanka)<br>SI56 1010 0005 3475 707 (Banka Intesa Sanpaolo)</dd></div>
+    </dl>
+  </section>
+</main>
+<script src="assets/js/layout.js?v=4"></script>
+<script>
+  document.getElementById('peCards').innerHTML = window.NOVOMAT_PE.map(c => `
+    <article class="pe rv" id="${c.id}">
+      <div class="pe__img"><img src="${c.img}" alt="Poslovalnica ${c.name}" loading="lazy"></div>
+      <div class="pe__body">
+        <h2>${c.name}</h2>
+        <dl>
+          <dt>Naslov</dt><dd>${c.addr}, ${c.post}</dd>
+          <dt>Telefon</dt><dd><a class="link-u" href="tel:${c.telH}">${c.tel}</a></dd>
+          <dt>GSM</dt><dd>${c.gsm}</dd>
+          <dt>E-pošta</dt><dd><a class="link-u" href="mailto:${c.mail}">${c.mail}</a></dd>
+          <dt>Delovni čas</dt><dd>Pon–pet 8.00–16.00, ${c.sat.toLowerCase()}</dd>
+          <dt>Plačilo</dt><dd>Gotovina, TRR, MasterCard, Maestro, Activa, Karanta</dd>
+        </dl>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent('Novomat ' + c.addr + ' ' + c.post)}" target="_blank" rel="noopener">Pot do nas ${window.NOVOMAT_ICONS.arrow}</a>
+      </div>
+    </article>`).join('');
+</script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/main.js?v=4"></script>
+</body>
+</html>

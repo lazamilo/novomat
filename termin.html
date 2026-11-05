@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="sl" class="no-js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Rezervirajte termin | Novomat Avto steklo center</title>
+<meta name="description" content="Pošljite povpraševanje in rezervirajte termin za menjavo ali popravilo avtostekla.">
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/logo/novomat-mark.png">
+<link rel="stylesheet" href="assets/css/style.css?v=4">
+<script>document.documentElement.classList.replace('no-js','js')</script>
+</head>
+<body data-page="termin">
+<main>
+  <section class="ph">
+    <h1 class="d1">Rezervirajte termin.</h1>
+    <div class="ph__row">
+      <p class="lead">Počeno, razbito ali kako drugače poškodovano steklo bo stvar preteklosti hitreje, kot si mislite.</p>
+    </div>
+  </section>
+  <section class="wrap" style="padding-bottom:clamp(80px,9vw,180px)">
+    <div class="rr" style="align-items:start">
+      <form class="form form--light" data-form novalidate>
+        <div class="field"><label for="t-ime">Ime in priimek</label><input id="t-ime" name="ime" autocomplete="name"></div>
+        <div class="field"><label for="t-tel">Telefon</label><input id="t-tel" name="tel" type="tel" autocomplete="tel"></div>
+        <div class="field"><label for="t-mail">E-pošta *</label><input id="t-mail" name="email" type="email" required autocomplete="email"></div>
+        <div class="field"><label for="t-pe">Poslovna enota *</label>
+          <select id="t-pe" name="pe" required><option value="">Izberite poslovalnico</option><option>Ljubljana</option><option>Maribor</option><option>Celje</option><option>Koper</option><option>Murska Sobota</option><option>Mobilni servis</option></select></div>
+        <div class="field field--full"><label for="t-txt">Opišite poškodbo, znamko in model vozila *</label><textarea id="t-txt" name="txt" required style="min-height:220px"></textarea></div>
+        <button class="btn" type="submit">Pošljite povpraševanje <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8h11M9 3.5 13.5 8 9 12.5"/></svg></button>
+        <p class="form__ok">Hvala. Oglasili se vam bomo v najkrajšem možnem času.</p>
+      </form>
+      <div class="docs">
+        <div class="doc" style="background:var(--mist)"><svg class="draw" viewBox="0 0 80 80"><circle cx="40" cy="40" r="28"/><path d="M40 24 V40 L50 48"/></svg><div><b>Pon–pet 8.00–16.00</b><span>Sobota 8.00–12.00 v Ljubljani in Mariboru, drugod po dogovoru</span></div></div>
+        <div class="doc" style="background:var(--mist)"><svg class="draw" viewBox="0 0 80 80"><path d="M22 14h12l5 13-7 4a32 32 0 0 0 17 17l4-7 13 5v12a5 5 0 0 1-5 5A48 48 0 0 1 17 19a5 5 0 0 1 5-5Z"/></svg><div><b><a href="tel:+38615309470">01 530 94 70</a></b><span>Ljubljana, ali pokličite najbližjo poslovalnico</span></div></div>
+        <div class="doc" style="background:var(--mist)"><svg class="draw" viewBox="0 0 80 80"><rect x="10" y="22" width="60" height="38" rx="6"/><path d="M10 34 H70 M20 50 H34"/></svg><div><b>Plačilo</b><span>Gotovina, TRR, MasterCard, Maestro, Activa in Karanta</span></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="assets/js/layout.js?v=4"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/lenis.min.js"></script>
+<script src="assets/js/main.js?v=4"></script>
+</body>
+</html>
